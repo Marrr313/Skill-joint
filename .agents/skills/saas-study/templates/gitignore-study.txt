@@ -1,0 +1,5 @@
+# saas-study output: local-only by default.
+# Delete this file (or specific lines) to opt-in to committing artifacts.
+# Authed captures may contain PII. Review before committing.
+*
+!.gitignore

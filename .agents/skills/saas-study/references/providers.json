@@ -1,0 +1,207 @@
+{
+  "version": "1.0",
+  "categories": {
+    "payments": [
+      {"name": "Stripe", "match_hosts": ["js.stripe.com", "api.stripe.com", "m.stripe.network", "checkout.stripe.com", "hooks.stripe.com", "billing.stripe.com"]},
+      {"name": "Paddle", "match_hosts": ["*.paddle.com", "cdn.paddle.com", "checkout.paddle.com"]},
+      {"name": "Lemonsqueezy", "match_hosts": ["*.lemonsqueezy.com", "app.lemonsqueezy.com"]},
+      {"name": "Chargebee", "match_hosts": ["*.chargebee.com"]},
+      {"name": "Recurly", "match_hosts": ["*.recurly.com"]},
+      {"name": "Stripe Tax", "match_hosts": ["api.stripe.com"], "path_hint": "/v1/tax/"}
+    ],
+    "auth": [
+      {"name": "Auth0", "match_hosts": ["*.auth0.com"]},
+      {"name": "Clerk", "match_hosts": ["*.clerk.accounts.dev", "*.clerk.com", "clerk.*"]},
+      {"name": "Supabase Auth", "match_hosts": ["*.supabase.co"], "path_hint": "/auth/v1/"},
+      {"name": "WorkOS", "match_hosts": ["api.workos.com"]},
+      {"name": "Firebase Auth", "match_hosts": ["identitytoolkit.googleapis.com", "securetoken.googleapis.com"]},
+      {"name": "Okta", "match_hosts": ["*.okta.com", "*.oktapreview.com"]},
+      {"name": "Stytch", "match_hosts": ["*.stytch.com"]},
+      {"name": "Magic", "match_hosts": ["*.magic.link"]},
+      {"name": "Logto", "match_hosts": ["*.logto.app"]},
+      {"name": "Keycloak (managed)", "match_hosts": ["*.keycloak.org"]}
+    ],
+    "analytics": [
+      {"name": "Segment", "match_hosts": ["cdn.segment.com", "cdn.segment.io", "api.segment.io"]},
+      {"name": "PostHog", "match_hosts": ["*.posthog.com", "us.i.posthog.com", "eu.i.posthog.com", "app.posthog.com"], "cookie_match": ["ph_phc_*", "ph_*_posthog"]},
+      {"name": "PostHog (reverse-proxied via CloudFront)", "match_hosts": ["*.cloudfront.net"], "path_hint": "/decide/", "cookie_match": ["ph_phc_*", "ph_*_posthog"]},
+      {"name": "Mixpanel", "match_hosts": ["api.mixpanel.com", "cdn.mxpnl.com", "api-js.mixpanel.com"]},
+      {"name": "Amplitude", "match_hosts": ["*.amplitude.com", "api2.amplitude.com"]},
+      {"name": "Plausible", "match_hosts": ["plausible.io"]},
+      {"name": "Fathom", "match_hosts": ["cdn.usefathom.com"]},
+      {"name": "Google Analytics", "match_hosts": ["www.googletagmanager.com", "www.google-analytics.com", "analytics.google.com", "stats.g.doubleclick.net"]},
+      {"name": "Hotjar", "match_hosts": ["*.hotjar.com", "*.hotjar.io"]},
+      {"name": "FullStory", "match_hosts": ["*.fullstory.com"]},
+      {"name": "Heap", "match_hosts": ["*.heap.io", "*.heapanalytics.com"]},
+      {"name": "Microsoft Clarity", "match_hosts": ["*.clarity.ms"]},
+      {"name": "Vercel Analytics", "match_hosts": ["*.vercel-insights.com", "vitals.vercel-analytics.com", "va.vercel-scripts.com"]},
+      {"name": "Meta Pixel (Facebook)", "match_hosts": ["connect.facebook.net", "*.facebook.com"], "path_hint": "/tr"},
+      {"name": "Cloudflare Web Analytics", "match_hosts": ["static.cloudflareinsights.com"]},
+      {"name": "Pirsch", "match_hosts": ["api.pirsch.io"]},
+      {"name": "Simple Analytics", "match_hosts": ["*.simpleanalytics.io"]},
+      {"name": "Ahrefs Analytics", "match_hosts": ["analytics.ahrefs.com"]}
+    ],
+    "affiliate": [
+      {"name": "Tolt", "match_hosts": ["cdn.tolt.io", "*.tolt.io"]},
+      {"name": "Rewardful", "match_hosts": ["r.wdfl.co", "*.rewardful.com", "*.getrewardful.com", "api.getrewardful.com", "cdn.getrewardful.com"]},
+      {"name": "PartnerStack", "match_hosts": ["*.partnerstack.com", "growsumo.com"]},
+      {"name": "FirstPromoter", "match_hosts": ["*.firstpromoter.com", "cdn.firstpromoter.com"]},
+      {"name": "Impact (PartnerHub)", "match_hosts": ["*.impactradius.com", "*.impactradius-event.com", "*.impact.com"]},
+      {"name": "Lasso", "match_hosts": ["app.lasso.so"]}
+    ],
+    "errors_monitoring": [
+      {"name": "Sentry", "match_hosts": ["*.sentry.io", "*.ingest.sentry.io", "browser.sentry-cdn.com"]},
+      {"name": "Datadog RUM", "match_hosts": ["browser-intake-datadoghq.com", "browser-intake-datadoghq.eu"]},
+      {"name": "LogRocket", "match_hosts": ["*.logrocket.com", "*.logrocket.io"]},
+      {"name": "Bugsnag", "match_hosts": ["*.bugsnag.com"]},
+      {"name": "Rollbar", "match_hosts": ["api.rollbar.com"]},
+      {"name": "Honeybadger", "match_hosts": ["api.honeybadger.io"]},
+      {"name": "Airbrake", "match_hosts": ["*.airbrake.io", "notifier-configs.airbrake.io"]},
+      {"name": "New Relic Browser", "match_hosts": ["bam.nr-data.net", "bam-cell.nr-data.net", "js-agent.newrelic.com"]}
+    ],
+    "search": [
+      {"name": "Algolia", "match_hosts": ["*.algolia.net", "*.algolianet.com"]},
+      {"name": "Meilisearch", "match_hosts": ["*.meilisearch.io"]},
+      {"name": "Typesense", "match_hosts": ["*.typesense.net"]},
+      {"name": "Elasticsearch Cloud", "match_hosts": ["*.elastic-cloud.com", "*.es.amazonaws.com"]}
+    ],
+    "messaging_support": [
+      {"name": "Intercom", "match_hosts": ["widget.intercom.io", "api-iam.intercom.io", "js.intercomcdn.com"]},
+      {"name": "Crisp", "match_hosts": ["*.crisp.chat"]},
+      {"name": "HelpScout Beacon", "match_hosts": ["beacon-v2.helpscout.net"]},
+      {"name": "Drift", "match_hosts": ["*.drift.com", "js.driftt.com"]},
+      {"name": "Zendesk", "match_hosts": ["*.zdassets.com", "*.zendesk.com"]},
+      {"name": "Front Chat", "match_hosts": ["chat-assets.frontapp.com"]},
+      {"name": "Pylon", "match_hosts": ["apichatwidget.usepylon.com", "*.usepylon.com"]},
+      {"name": "Plain", "match_hosts": ["chat.cdn-plain.com"]},
+      {"name": "Chatway", "match_hosts": ["*.chatway.app", "cdn.chatway.app", "widget.chatway.app", "prod-api.chatway.app"]}
+    ],
+    "ai_llm": [
+      {"name": "OpenAI", "match_hosts": ["api.openai.com"]},
+      {"name": "Anthropic", "match_hosts": ["api.anthropic.com"]},
+      {"name": "Replicate", "match_hosts": ["api.replicate.com"]},
+      {"name": "Pinecone", "match_hosts": ["*.pinecone.io"]},
+      {"name": "ElevenLabs", "match_hosts": ["api.elevenlabs.io"]},
+      {"name": "Cohere", "match_hosts": ["api.cohere.ai", "api.cohere.com"]},
+      {"name": "OpenRouter", "match_hosts": ["openrouter.ai"]},
+      {"name": "Hugging Face Inference", "match_hosts": ["api-inference.huggingface.co"]},
+      {"name": "Groq", "match_hosts": ["api.groq.com"]},
+      {"name": "Together AI", "match_hosts": ["api.together.xyz"]},
+      {"name": "Mistral", "match_hosts": ["api.mistral.ai"]},
+      {"name": "Perplexity", "match_hosts": ["api.perplexity.ai"]},
+      {"name": "Fireworks AI", "match_hosts": ["api.fireworks.ai"]},
+      {"name": "Weaviate Cloud", "match_hosts": ["*.weaviate.network", "*.weaviate.cloud"]},
+      {"name": "Qdrant Cloud", "match_hosts": ["*.qdrant.io"]},
+      {"name": "LangSmith", "match_hosts": ["api.smith.langchain.com"]}
+    ],
+    "media_cdn": [
+      {"name": "Cloudinary", "match_hosts": ["res.cloudinary.com"]},
+      {"name": "Imgix", "match_hosts": ["*.imgix.net"]},
+      {"name": "Mux", "match_hosts": ["*.mux.com", "stream.mux.com", "image.mux.com"]},
+      {"name": "Cloudflare Images", "match_hosts": ["imagedelivery.net"]},
+      {"name": "Cloudflare Stream", "match_hosts": ["videodelivery.net", "*.cloudflarestream.com"]},
+      {"name": "Uploadcare", "match_hosts": ["ucarecdn.com"]},
+      {"name": "Bunny.net", "match_hosts": ["*.b-cdn.net"]},
+      {"name": "Bytescale", "match_hosts": ["upcdn.io"]},
+      {"name": "AWS CloudFront", "match_hosts": ["*.cloudfront.net"]},
+      {"name": "Vercel Image", "match_hosts": []},
+      {"name": "Bunny Stream", "match_hosts": ["*.mediadelivery.net"]}
+    ],
+    "feature_flags": [
+      {"name": "LaunchDarkly", "match_hosts": ["*.launchdarkly.com", "events.launchdarkly.com"]},
+      {"name": "Statsig", "match_hosts": ["*.statsig.com", "featureassets.org", "featuregates.org", "prodregistryv2.org", "events.statsigapi.net"]},
+      {"name": "GrowthBook", "match_hosts": ["*.growthbook.io"]},
+      {"name": "Flagsmith", "match_hosts": ["*.flagsmith.com"]},
+      {"name": "PostHog Flags", "match_hosts": ["us.i.posthog.com", "eu.i.posthog.com"], "path_hint": "/decide/"}
+    ],
+    "backend_baas": [
+      {"name": "Supabase", "match_hosts": ["*.supabase.co"]},
+      {"name": "Firebase", "match_hosts": ["*.firebaseio.com", "firestore.googleapis.com", "*.firebaseapp.com"]},
+      {"name": "Hasura Cloud", "match_hosts": ["*.hasura.app"]},
+      {"name": "Convex", "match_hosts": ["*.convex.cloud"]},
+      {"name": "Xata", "match_hosts": ["*.xata.sh"]},
+      {"name": "Nhost", "match_hosts": ["*.nhost.run"]},
+      {"name": "Appwrite Cloud", "match_hosts": ["*.appwrite.io"]},
+      {"name": "PocketBase", "match_hosts": ["*.pockethost.io"]}
+    ],
+    "email_transactional": [
+      {"name": "Postmark", "match_hosts": ["api.postmarkapp.com"]},
+      {"name": "Resend", "match_hosts": ["api.resend.com"]},
+      {"name": "SendGrid", "match_hosts": ["api.sendgrid.com"]},
+      {"name": "Loops", "match_hosts": ["app.loops.so"]},
+      {"name": "Mailgun", "match_hosts": ["api.mailgun.net"]}
+    ],
+    "social_auth_oauth": [
+      {"name": "Google OAuth", "match_hosts": ["accounts.google.com", "oauth2.googleapis.com"]},
+      {"name": "GitHub OAuth", "match_hosts": ["github.com"], "path_hint": "/login/oauth/"},
+      {"name": "Apple Sign In", "match_hosts": ["appleid.apple.com"]},
+      {"name": "Microsoft OAuth", "match_hosts": ["login.microsoftonline.com"]}
+    ],
+    "hosting_infra_headers": [
+      {"name": "Vercel", "match_response_header": ["x-vercel-id", "x-vercel-cache", "server: Vercel"]},
+      {"name": "Netlify", "match_response_header": ["x-nf-request-id", "server: Netlify"]},
+      {"name": "Cloudflare", "match_response_header": ["cf-ray", "cf-cache-status"]},
+      {"name": "Fly.io", "match_response_header": ["fly-request-id"]},
+      {"name": "Render", "match_response_header": ["x-render-origin-server"]},
+      {"name": "Railway", "match_response_header": ["x-railway-edge", "x-railway-request-id"]},
+      {"name": "Heroku", "match_response_header": ["via: 1.1 vegur", "via: 2.0 heroku-router", "server: Heroku", "report-to: heroku-nel"]},
+      {"name": "AWS CloudFront", "match_response_header": ["x-amz-cf-id", "x-cache: hit from cloudfront"]},
+      {"name": "Fastly", "match_response_header": ["fastly-debug-digest", "x-served-by"]}
+    ],
+    "captcha_botprotection": [
+      {"name": "hCaptcha", "match_hosts": ["*.hcaptcha.com", "newassets.hcaptcha.com"]},
+      {"name": "reCAPTCHA", "match_hosts": ["www.google.com"], "path_hint": "/recaptcha/"},
+      {"name": "Cloudflare Turnstile", "match_hosts": ["challenges.cloudflare.com"]},
+      {"name": "Datadome", "match_hosts": ["*.datadome.co", "*.captcha-delivery.com"]},
+      {"name": "Arkose Labs", "match_hosts": ["*.arkoselabs.com"]},
+      {"name": "PerimeterX", "match_hosts": ["*.perimeterx.net", "*.px-cloud.net"]}
+    ],
+    "scheduling_calendar": [
+      {"name": "Cal.com", "match_hosts": ["*.cal.com"]},
+      {"name": "Calendly", "match_hosts": ["*.calendly.com"]},
+      {"name": "Tidycal", "match_hosts": ["*.tidycal.com"]}
+    ],
+    "pii_pci_tokenization": [
+      {"name": "Evervault", "match_hosts": ["*.evervault.com", "keys.evervault.com", "api.evervault.com"]},
+      {"name": "VGS (Very Good Security)", "match_hosts": ["*.verygoodvault.com"]},
+      {"name": "Skyflow", "match_hosts": ["*.skyflowapis.com"]},
+      {"name": "Basis Theory", "match_hosts": ["*.basistheory.com"]}
+    ],
+    "user_research_surveys": [
+      {"name": "Sprig", "match_hosts": ["api.sprig.com", "*.sprig.com"]},
+      {"name": "Hotjar Surveys", "match_hosts": ["*.hotjar.io"]},
+      {"name": "Typeform", "match_hosts": ["*.typeform.com"]},
+      {"name": "Survicate", "match_hosts": ["survey.survicate.com"]},
+      {"name": "Userpilot", "match_hosts": ["api.userpilot.io"]},
+      {"name": "Chameleon", "match_hosts": ["*.trychameleon.com"]}
+    ],
+    "creator_influencer_data": [
+      {"name": "Phyllo", "match_hosts": ["*.getphyllo.com", "api.getphyllo.com"], "data_shape_hint": "platformProfile.demographics with male/female age buckets + countries int counts + stats.uniqueId + recentPosts[20]"},
+      {"name": "Modash", "match_hosts": ["*.modash.io", "api.modash.io"]},
+      {"name": "HypeAuditor", "match_hosts": ["*.hypeauditor.com"]},
+      {"name": "CreatorIQ", "match_hosts": ["*.creatoriq.com", "*.tribedynamics.com"]},
+      {"name": "Klear (Meltwater)", "match_hosts": ["*.klear.com"]},
+      {"name": "Upfluence", "match_hosts": ["*.upfluence.com"]}
+    ],
+    "brand_logos_assets": [
+      {"name": "Logo.dev", "match_hosts": ["*.logo.dev", "img.logo.dev"]},
+      {"name": "Clearbit Logo", "match_hosts": ["logo.clearbit.com"]},
+      {"name": "Brandfetch", "match_hosts": ["*.brandfetch.io", "cdn.brandfetch.io"]}
+    ],
+    "marketing_site_builder": [
+      {"name": "Framer", "match_hosts": ["*.framer.com", "framerusercontent.com", "app.framerstatic.com", "events.framer.com"]},
+      {"name": "Webflow", "match_hosts": ["*.webflow.com", "*.webflow.io", "assets-global.website-files.com", "cdn.prod.website-files.com", "*.website-files.com"]},
+      {"name": "Wix", "match_hosts": ["static.parastorage.com", "*.wix.com", "*.wixstatic.com"]},
+      {"name": "Squarespace", "match_hosts": ["*.squarespace-cdn.com", "*.squarespace.com"]},
+      {"name": "Carrd", "match_hosts": ["carrd.co"]},
+      {"name": "Cargo", "match_hosts": ["freight.cargo.site"]},
+      {"name": "Readymag", "match_hosts": ["readymag.com"]}
+    ],
+    "api_style": [
+      {"name": "tRPC", "match_hosts": [], "path_hint": "/api/trpc/"},
+      {"name": "GraphQL", "match_hosts": [], "path_hint": "/graphql"},
+      {"name": "GraphQL (Apollo)", "match_hosts": [], "path_hint": "/apollo/"},
+      {"name": "Hasura", "match_hosts": [], "path_hint": "/v1/graphql"}
+    ]
+  }
+}

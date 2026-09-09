@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "skills": {
+    "ai-voice-humanizer": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "ai-voice-humanizer/SKILL.md",
+      "computedHash": "73d6a37e8d64c9308d2b66da6e5dfe31fc8841b2ed327ff8b9649c78e666b1da"
+    },
+    "blog-writer": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "blog-writer/SKILL.md",
+      "computedHash": "78410e2abc6cb1680baad0f2e1ce7ca2bfdd29b5858b2a49dd3a92a1f69118d3"
+    },
+    "brand-kit": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "brand-kit/SKILL.md",
+      "computedHash": "fd42080ec7f574221a41d03223c65f03c05de533bb9115456c27718c10d1c971"
+    },
+    "brand-voice-extractor": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "brand-voice-extractor/SKILL.md",
+      "computedHash": "dd7c137ef7e7784234e28d91bb4cbbfbaa6b18e8d5eb55925171cc98e287fe49"
+    },
+    "course-infographics": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "course-infographics/SKILL.md",
+      "computedHash": "bb054ae748a8859beaa26aaee1f9a55662428d75ffb9c85236541a3e7dc1b5fb"
+    },
+    "extract-design": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "extract-design/SKILL.md",
+      "computedHash": "7a21a4dffd8827a4063eb98cb5e32ef1474140b5d884758dc5ca5a3c8485060a"
+    },
+    "lesson-writer": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "lesson-writer/SKILL.md",
+      "computedHash": "69a741fc1617f9e068594adc3d9d8fc5faadd2a99df41467afe93fb96aec3cb9"
+    },
+    "mascot-processor": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "mascot-processor/SKILL.md",
+      "computedHash": "58595ddfba8fff060934c7c04f24b967465430a044e191e311bb4a67ee914a1f"
+    },
+    "prompt-enhancer": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "prompt-enhancer/SKILL.md",
+      "computedHash": "10c8124f0b373fa2f5438224706ac1cbd0533308704c6db6e99fecc27559f701"
+    },
+    "remotion-video-builder": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "remotion-video-builder/SKILL.md",
+      "computedHash": "d055f1cc021d8238a88d8372cab81851a73253ff6b66bdf88347401c1b8bf7a2"
+    },
+    "saas-study": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "saas-study/SKILL.md",
+      "computedHash": "aca76d71c9470c14347b0d4b8d47f7044292da0572253a8e9a7abe052a68a141"
+    },
+    "skool-course": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "skool-course/SKILL.md",
+      "computedHash": "4fd4101142baaa2f94bc9b7a47c7571ccc7111eaeb754fb9a1784d1865e93656"
+    },
+    "startup-naming-scorer": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "startup-naming-scorer/SKILL.md",
+      "computedHash": "058c787461ebf5468bea71c8084a82de2b30c78f26f4766a86f18b02b8fd38d5"
+    },
+    "ui-workflow": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "ui-workflow/SKILL.md",
+      "computedHash": "7015d12bf58697316d93b2561f8ed5cdab8354fe6b47aba295e6710617b466f6"
+    },
+    "video-style-extractor": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "video-style-extractor/SKILL.md",
+      "computedHash": "8ccaf029c031bdab402dc520a221cf77d40d2c015a112c32d43fa33db3adc0f4"
+    },
+    "watch": {
+      "source": "NulightJens/jensai-skills",
+      "sourceType": "github",
+      "skillPath": "claude-watch/SKILL.md",
+      "computedHash": "24794bb748b89367d562d9749fe47e76accccff80e493abdcc63c682d1cc603f"
+    }
+  }
+}

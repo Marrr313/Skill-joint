@@ -1,0 +1,39 @@
+{
+  "default_profile": "balanced",
+  "profiles": {
+    "fast": {
+      "public_fetch_delay_seconds": [0.5, 1.5],
+      "browser_nav_delay_seconds": [1, 2],
+      "between_steps_delay_seconds": [2, 5],
+      "max_requests_per_minute": 30,
+      "max_total_actions": 200,
+      "scroll_after_navigate": false,
+      "hover_before_click": false,
+      "human_distraction_chance": 0.0,
+      "use_browser_for_all_fetches": false
+    },
+    "balanced": {
+      "public_fetch_delay_seconds": [2, 5],
+      "browser_nav_delay_seconds": [3, 7],
+      "between_steps_delay_seconds": [5, 15],
+      "max_requests_per_minute": 8,
+      "max_total_actions": 60,
+      "scroll_after_navigate": true,
+      "hover_before_click": true,
+      "human_distraction_chance": 0.10,
+      "use_browser_for_all_fetches": false
+    },
+    "high": {
+      "public_fetch_delay_seconds": [5, 12],
+      "browser_nav_delay_seconds": [8, 20],
+      "between_steps_delay_seconds": [15, 45],
+      "max_requests_per_minute": 3,
+      "max_total_actions": 30,
+      "scroll_after_navigate": true,
+      "hover_before_click": true,
+      "human_distraction_chance": 0.25,
+      "use_browser_for_all_fetches": true
+    }
+  },
+  "per_domain_overrides": {}
+}

@@ -1,0 +1,116 @@
+---
+domain: {{ domain }}
+study_date: {{ study_date }}
+auth_used: {{ auth_used | lower }}
+study_version: {{ study_version }}
+stealth_profile: {{ stealth_profile }}
+---
+
+# {{ domain }}: Study Brief
+
+## 1. At a glance
+- **Tagline:** {{ tagline or "(not captured)" }}
+- **Captured pages:** {{ counts.html_pages }} ({{ counts.public_pages }} public, {{ counts.authed_pages }} authed)
+- **Unique third-party providers detected:** {{ counts.providers_detected }}
+- **Own API endpoints observed:** {{ counts.endpoints_observed }}
+- **Unique hosts seen:** {{ counts.unique_hosts }}
+
+## 2. Product surface
+{% if features %}
+{% for feature in features %}
+- {{ feature.name }}{% if feature.evidence %}: {{ feature.evidence }}{% endif %}{% if feature.path %} → {{ feature.path }}{% endif %}
+{% endfor %}
+{% else %}
+- (No feature pages identified beyond landing/about/pricing/etc. Authed phase typically populates this.)
+{% endif %}
+
+## 3. Tech stack
+{% for k, v in tech.items() %}
+- **{{ k }}:** {{ v }}
+{% endfor %}
+- See: derived/tech-fingerprint.json
+
+## 4. Providers
+{% for category, names in providers.summary.items() %}
+{% if names %}
+- **{{ category }}:** {{ names | join(", ") }}
+{% endif %}
+{% endfor %}
+- See: derived/providers.json (with evidence per provider)
+
+{% if shape_findings %}
+### 4b. Vendors detected from response-body data shapes
+
+These vendors don't appear in browser network logs because the SaaS proxies them server-side, but their data shapes leak into the responses. Detected by `fingerprint_data_shapes.py`:
+
+| Vendor | Category | Confidence | Score |
+|---|---|---|---|
+{% for f in shape_findings %}
+| **{{ f.vendor }}** | {{ f.category }} | {{ f.confidence }} | {{ f.score }} |
+{% endfor %}
+- See: `derived/data-shape-fingerprints.json` for matched signals per file.
+{% endif %}
+
+## 5. API surface (own hosts)
+{% for host, info in own_api.endpoints_by_host.items() %}
+- **{{ host }}**: {{ info.endpoints | length }} endpoints observed
+{% endfor %}
+- See: derived/api-endpoints.json
+
+## 6. Pricing snapshot
+{% if pricing.tiers %}{% for tier in pricing.tiers %}
+- **{{ tier.name }}**: {{ tier.price_monthly or "?" }}{% if tier.price_yearly %} ({{ tier.price_yearly }} yearly){% endif %}{% if tier.features %}: {{ tier.features | join("; ") }}{% endif %}
+{% endfor %}
+- **Trial:** {{ pricing.trial or "not detected" }}
+- **Billing cadence:** {{ pricing.cadence | join(", ") if pricing.cadence else "?" }}
+{% else %}
+- (No pricing page captured or detected.)
+{% endif %}
+- See: derived/pricing.json + screenshots/pricing.png
+
+## 7. Authed coverage
+{% if auth_used %}{% for surface in authed_surfaces %}
+- {{ surface }}
+{% endfor %}
+- See: extracted/*.md and screenshots/*.png
+{% else %}
+- Authed phase skipped (--no-authed)
+{% endif %}
+
+## 8. Standout actions
+{% if standout_actions %}{% for a in standout_actions %}
+- **{{ a.label }}** ({{ a.page }}) → {% for ep in a.endpoints[:3] %}{{ ep.method }} {{ ep.host }}{{ ep.path }}{% if ep.status %} ({{ ep.status }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}{% if a.endpoints | length > 3 %} (+{{ a.endpoints | length - 3 }} more){% endif %}
+{% endfor %}
+- See: extracted/action-map.md + derived/action-trace.jsonl
+{% else %}
+- (No action-mode captures recorded.)
+{% endif %}
+
+## 9. Where to dig
+| Question | Read |
+|---|---|
+| Dashboard look? | screenshots/dashboard.png + extracted/dashboard.md |
+| Exact API contract for X? | derived/action-trace.jsonl (grep) |
+| Providers + evidence? | derived/providers.json |
+| Full pricing detail? | extracted/pricing.md + derived/pricing.json |
+| Framework / hosting? | derived/tech-fingerprint.json |
+| Own API endpoints? | derived/api-endpoints.json |
+| Raw HTML? | raw/html/ |
+| Specific network call? | raw/network/authed.json |
+
+## 10. Related files
+
+{% if analysis_exists %}
+- 📝 [`ANALYSIS.md`](./ANALYSIS.md): interpretive layer (build-recommendations, subjective takeaways, strategic notes). **Opinion, not observation**, kept separate so this brief stays factual.
+{% else %}
+- *(No `ANALYSIS.md` present. Create one alongside this BRIEF when you want to layer interpretive opinions without polluting the factual observation.)*
+{% endif %}
+- 🛠 [`{{ derived_folder_path }}/`](.) is the sibling folder for **transformations**: templates extracted from the study, design tokens, build plans. Keep this raw study folder pure observation; put modifications in the derived folder.
+
+## 11. Publication checklist (before sharing this study)
+- [ ] Review screenshots/ for visible PII (auto-redaction is best-effort, not exhaustive)
+- [ ] derived/network-summary.json is auto-scrubbed; raw/network/* is NOT, so exclude raw/ from anything you share
+- [ ] raw/network/sample_*.network-response files contain unscrubbed response bodies + bearer tokens in request headers, so **exclude them from anything shared externally**
+- [ ] derived/action-trace.jsonl is auto-scrubbed
+- [ ] extracted/*.md is auto-scrubbed
+- [ ] If you wrote anything in notes/user-notes.md or ANALYSIS.md, review it manually
