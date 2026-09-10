@@ -29,7 +29,7 @@ Follow this pipeline for any project involving UI. Steps 0, 1, 3, and everything
   - Data flow per screen (what data populates what)
 - Format the PRD with tables, bullet lists, and clear headings. No ambiguity.
 
-If you also have a dedicated design-direction skill installed (Anthropic's `frontend-design` plugin skill, or any house equivalent), invoke it here to set aesthetic direction before the PRD is written.
+If you also have a dedicated design-direction skill installed (Anthropic's `frontend-design` plugin skill, [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — a design-system generator with a large library of styles, palettes, and per-industry rules, installed separately via `npm install -g ui-ux-pro-max-cli && uipro init --ai claude` — or any house equivalent), invoke it here to set aesthetic direction before the PRD is written.
 
 ## Step 2: Mockup Generation (optional, via Stitch MCP or Nano Banana 2)
 
