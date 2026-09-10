@@ -7,11 +7,23 @@
       "skillPath": "ai-voice-humanizer/SKILL.md",
       "computedHash": "73d6a37e8d64c9308d2b66da6e5dfe31fc8841b2ed327ff8b9649c78e666b1da"
     },
+    "babysit": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/babysit/SKILL.md",
+      "computedHash": "1e0610afc6110fad8c012f44dd5aa09cdd25530198f515f49e5d94eda08a4465"
+    },
     "blog-writer": {
       "source": "NulightJens/jensai-skills",
       "sourceType": "github",
       "skillPath": "blog-writer/SKILL.md",
       "computedHash": "78410e2abc6cb1680baad0f2e1ce7ca2bfdd29b5858b2a49dd3a92a1f69118d3"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "computedHash": "b58d55b64742ecd37923985ec7bdfbe678ffbcb9895562abd28c0a32dcacd7fb"
     },
     "brand-kit": {
       "source": "NulightJens/jensai-skills",
@@ -25,11 +37,47 @@
       "skillPath": "brand-voice-extractor/SKILL.md",
       "computedHash": "dd7c137ef7e7784234e28d91bb4cbbfbaa6b18e8d5eb55925171cc98e287fe49"
     },
+    "ccs-align": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/ccs-align/SKILL.md",
+      "computedHash": "f59e823fe8080bf1fbcaf3e568ecc7dd873cbaf8694b8aac49f5406e9ca801dd"
+    },
+    "cloud-sync": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/cloud-sync/SKILL.md",
+      "computedHash": "e33574d4a9136764f10ae7f33dc3cc983e11e3c19f9f4b243b102eedcc3dc904"
+    },
     "course-infographics": {
       "source": "NulightJens/jensai-skills",
       "sourceType": "github",
       "skillPath": "course-infographics/SKILL.md",
       "computedHash": "bb054ae748a8859beaa26aaee1f9a55662428d75ffb9c85236541a3e7dc1b5fb"
+    },
+    "design-is": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/design-is/SKILL.md",
+      "computedHash": "f2912e5eb57ebf3dafa2c08fa92af2294309951cef124b83d35214aebc98de8d"
+    },
+    "dispatching-parallel-agents": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/dispatching-parallel-agents/SKILL.md",
+      "computedHash": "b011107f17188e0b2898bb1856b5bac8b49537cc86e737c82126558a235bd62a"
+    },
+    "do": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/do/SKILL.md",
+      "computedHash": "ac80a2338872768e8d9e24bcad9d7a379019afa062167a20b525c4562405a2a3"
+    },
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "computedHash": "78a07800ee99a5861ae10be59d79fad085fdca10444e8aaeb2691597e357cff8"
     },
     "extract-design": {
       "source": "NulightJens/jensai-skills",
@@ -37,11 +85,53 @@
       "skillPath": "extract-design/SKILL.md",
       "computedHash": "7a21a4dffd8827a4063eb98cb5e32ef1474140b5d884758dc5ca5a3c8485060a"
     },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf"
+    },
+    "finishing-a-development-branch": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/finishing-a-development-branch/SKILL.md",
+      "computedHash": "4f571e7befb8b0946d9d7770232c818812412e9ab1dfb811f847edfba1fc6275"
+    },
+    "how-it-works": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/how-it-works/SKILL.md",
+      "computedHash": "121ff2926b3de14b8b1ffdb883b736004a3b25e3fcb3589ca386ecca5bff1900"
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "0c186575780acff90578f7ee166651165d663bab718e8df5875f21d4fcffa708"
+    },
+    "knowledge-agent": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/knowledge-agent/SKILL.md",
+      "computedHash": "52a8f2c5351a0b73b3c55296c3dcd46ade6070f66f0d59ccd01832a9f77123f6"
+    },
+    "learn-codebase": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/learn-codebase/SKILL.md",
+      "computedHash": "9142aab8302123f63d8db49430d1f59e2ff2bdcb885d6b3f054f22f7d92f5791"
+    },
     "lesson-writer": {
       "source": "NulightJens/jensai-skills",
       "sourceType": "github",
       "skillPath": "lesson-writer/SKILL.md",
       "computedHash": "69a741fc1617f9e068594adc3d9d8fc5faadd2a99df41467afe93fb96aec3cb9"
+    },
+    "make-plan": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/make-plan/SKILL.md",
+      "computedHash": "828c96bc3eab1c8c46db001b3a6a71fe07dfb32814081678ddfe067ba0978664"
     },
     "mascot-processor": {
       "source": "NulightJens/jensai-skills",
@@ -49,17 +139,59 @@
       "skillPath": "mascot-processor/SKILL.md",
       "computedHash": "58595ddfba8fff060934c7c04f24b967465430a044e191e311bb4a67ee914a1f"
     },
+    "mem-search": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/mem-search/SKILL.md",
+      "computedHash": "c61240612c16c4139e778bf1d953b37bcdfa03f022195203381537cb3f34a960"
+    },
+    "mem-setup": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "cowork/skills/mem-setup/SKILL.md",
+      "computedHash": "f28ffd2feeba2a2a31205b742142033ce71166a2895aa5a8a8883c7f8c8dd50e"
+    },
+    "mode-creator": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/mode-creator/SKILL.md",
+      "computedHash": "035b1cad208dc0d67f38673a1978fad79a90f838f45876f20b886afd57a70ba5"
+    },
+    "oh-my-issues": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/oh-my-issues/SKILL.md",
+      "computedHash": "cee3669201ddc7eb488e3c20699ad46428ded9ff29e98c7c1fbfc696e1d29cfd"
+    },
+    "pathfinder": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/pathfinder/SKILL.md",
+      "computedHash": "96bf2edcbffd36a3119d4dea942561b02ecf355cc872d73cf21cc346092e3db2"
+    },
     "prompt-enhancer": {
       "source": "NulightJens/jensai-skills",
       "sourceType": "github",
       "skillPath": "prompt-enhancer/SKILL.md",
       "computedHash": "10c8124f0b373fa2f5438224706ac1cbd0533308704c6db6e99fecc27559f701"
     },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/receiving-code-review/SKILL.md",
+      "computedHash": "59361179fc9225173e0c145ffd9bafbf9fdbf8b43ce3dc308497a0b4f83a6063"
+    },
     "remotion-video-builder": {
       "source": "NulightJens/jensai-skills",
       "sourceType": "github",
       "skillPath": "remotion-video-builder/SKILL.md",
       "computedHash": "d055f1cc021d8238a88d8372cab81851a73253ff6b66bdf88347401c1b8bf7a2"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "computedHash": "004f340ae65811095d6a9bb0a759c87d0a8085c5e705dbb019b011626293d2e9"
     },
     "ruflo": {
       "source": "ruvnet/ruflo",
@@ -79,17 +211,83 @@
       "skillPath": "skool-course/SKILL.md",
       "computedHash": "4fd4101142baaa2f94bc9b7a47c7571ccc7111eaeb754fb9a1784d1865e93656"
     },
+    "smart-explore": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/smart-explore/SKILL.md",
+      "computedHash": "9a1725dd93477d0b1c698f3b47734dc10491c6edeb89cb728d2f33ab4ac35fce"
+    },
+    "standup": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/standup/SKILL.md",
+      "computedHash": "d297e73c460cc806b578f7c4a97ada138035320d7d53cff4357e5d9ce9664631"
+    },
     "startup-naming-scorer": {
       "source": "NulightJens/jensai-skills",
       "sourceType": "github",
       "skillPath": "startup-naming-scorer/SKILL.md",
       "computedHash": "058c787461ebf5468bea71c8084a82de2b30c78f26f4766a86f18b02b8fd38d5"
     },
+    "subagent-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/subagent-driven-development/SKILL.md",
+      "computedHash": "367cc1d3216d6672b947c8c6583dbd6440ea407beb6da75a97d3a8ee1a23640a"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "computedHash": "a2750dfbaed1690da73b120254892c4f926b4576cb82eb16fc877783941fe39b"
+    },
+    "task-observer": {
+      "source": "rebelytics/one-skill-to-rule-them-all",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "9e1bc7798f5d1926710d5402c2b5259d56c6b7ff27d9fc2589a808f0c5663d7c"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "computedHash": "a4126a9c5f17be3c228aa9e5755898ade283448b86099f56f40852e8c14532be"
+    },
+    "timeline-report": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/timeline-report/SKILL.md",
+      "computedHash": "b2194d39219a5baa62b5f9373b1cc04b8020ddebed8496d2eb7da9a729fbc99c"
+    },
     "ui-workflow": {
       "source": "NulightJens/jensai-skills",
       "sourceType": "github",
       "skillPath": "ui-workflow/SKILL.md",
       "computedHash": "7015d12bf58697316d93b2561f8ed5cdab8354fe6b47aba295e6710617b466f6"
+    },
+    "using-git-worktrees": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-git-worktrees/SKILL.md",
+      "computedHash": "48c8a1040e378e0cb7208107294e3afa9067b9370c3f33b49a443eb6b7528b0d"
+    },
+    "using-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-superpowers/SKILL.md",
+      "computedHash": "c7abe8bdc2099bbe4f245454d32c7563ccd2bb41dcc218b02b461c2acc3c6ae6"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "computedHash": "b529822bdac4b197b180fe12225cff86b930b65910435103c10622df7f041651"
+    },
+    "version-bump": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/version-bump/SKILL.md",
+      "computedHash": "0db1e3b5d8fec1c97b061c7559188c9761926f17f54214b51613fb4cc8403f06"
     },
     "video-style-extractor": {
       "source": "NulightJens/jensai-skills",
@@ -102,6 +300,36 @@
       "sourceType": "github",
       "skillPath": "claude-watch/SKILL.md",
       "computedHash": "24794bb748b89367d562d9749fe47e76accccff80e493abdcc63c682d1cc603f"
+    },
+    "weekly-digests": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/weekly-digests/SKILL.md",
+      "computedHash": "7f7c19f47354e23952205ed63e828f4b953d830a24f0d93d45e119d9db6e87d5"
+    },
+    "what-the": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/what-the/SKILL.md",
+      "computedHash": "89d95f90e4299972cec11765a2db44dd4cb60c8c9f10b58eebfbcb1eec7aaf41"
+    },
+    "wowerpoint": {
+      "source": "thedotmack/claude-mem",
+      "sourceType": "github",
+      "skillPath": "plugin/skills/wowerpoint/SKILL.md",
+      "computedHash": "1f3e37d16463d0a9a55b178f3fb0325f10906891a3e2ec1bdbb970696190d5a5"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "computedHash": "27c75044e444a4fc68798c3f799dc23eaff3a6bfabff32e6ad75bb20f881c094"
+    },
+    "writing-skills": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/writing-skills/SKILL.md",
+      "computedHash": "e5dfc1a942f56dc757421b0d87ae1f38ab693ebc71138e65268fd408bb5c93d3"
     }
   }
 }
