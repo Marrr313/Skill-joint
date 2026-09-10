@@ -61,6 +61,12 @@
       "skillPath": "remotion-video-builder/SKILL.md",
       "computedHash": "d055f1cc021d8238a88d8372cab81851a73253ff6b66bdf88347401c1b8bf7a2"
     },
+    "ruflo": {
+      "source": "ruvnet/ruflo",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "e706dd7d057ebb4e456bdfc312d38fe07bf2419476d246164801571d4cd481da"
+    },
     "saas-study": {
       "source": "NulightJens/jensai-skills",
       "sourceType": "github",
