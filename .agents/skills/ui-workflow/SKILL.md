@@ -31,9 +31,9 @@ Follow this pipeline for any project involving UI. Steps 0, 1, 3, and everything
 
 If you also have a dedicated design-direction skill installed (Anthropic's `frontend-design` plugin skill, or any house equivalent), invoke it here to set aesthetic direction before the PRD is written.
 
-## Step 2: Mockup Generation (optional, via Stitch MCP)
+## Step 2: Mockup Generation (optional, via Stitch MCP or Nano Banana 2)
 
-Skip this step entirely if you do not use [Google Stitch](https://stitch.withgoogle.com/). Hand-built HTML mockups or any other design tool substitute fine; the rest of the pipeline does not depend on it.
+Skip this step entirely if you use neither of these. Hand-built HTML mockups or any other design tool substitute fine; the rest of the pipeline does not depend on it.
 
 With the Stitch MCP server connected:
 
@@ -82,6 +82,12 @@ The server is the community `stitch-mcp` npm package. It talks to Google Stitch 
 
 Replace `YOUR_PROJECT_ID` with your own Google Cloud project ID. Never hardcode credentials into the config; the `gcloud auth application-default login` step is what supplies them.
 
+### Alternative or complement: Nano Banana 2
+
+[Nano Banana 2](https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/) (Gemini 3.1 Flash Image) is Google's image generation and editing model. Where Stitch produces structured UI screens plus a design-tokens file built for coding agents to consume, Nano Banana 2 is a general image model — feed it a rough wireframe sketch alongside a screenshot of a site whose look you want, and it composites the two into a high-fidelity mockup image. Use it when you want a quick visual direction to react to, or to generate marketing/hero imagery alongside the UI itself; use Stitch when you want the structured design tokens and HTML export that feed directly into Step 3.
+
+No MCP server is required. Get a free API key from [Google AI Studio](https://aistudio.google.com/), then call the Gemini API's image generation endpoint with the `gemini-3.1-flash-image` model, or generate directly in AI Studio's UI if you don't need to script it.
+
 ## Step 3: Integration
 
 - Use the generated code and design context as the foundation for the project UI.
@@ -99,6 +105,16 @@ Replace `YOUR_PROJECT_ID` with your own Google Cloud project ID. Never hardcode 
 - Add components via CLI: `npx shadcn@latest add button card dialog`
 - If the project has not initialized shadcn yet, run `npx shadcn@latest init` first.
 - Setup details and the component catalog live at [ui.shadcn.com](https://ui.shadcn.com/docs).
+
+### Sourcing richer components from 21st.dev
+
+Plain shadcn primitives are plain by design. When a screen needs more visual polish than the built-in catalog offers — animated components, 3D elements, marketing blocks — browse [21st.dev](https://21st.dev/), a community marketplace of React + Tailwind components built on the same shadcn primitives. Every component ships with a live preview and copyable source, so nothing else about this workflow changes; it's just a wider net to cast when shadcn's own components look too generic.
+
+To pull components straight into Claude Code instead of copy-pasting, register the 21st.dev MCP server with a free API key from your [21st.dev account settings](https://21st.dev/):
+
+```bash
+claude mcp add 21st-dev --scope user -e TWENTY_FIRST_API_KEY=YOUR_API_KEY -- npx -y @21st-dev/cli@latest
+```
 
 ## Build and Reference Design Tokens
 
